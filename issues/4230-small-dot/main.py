@@ -1,10 +1,8 @@
 import torch
-import sys
-import os
 import triton
 import triton.language as tl
 
-K = 4
+K = 8
 
 @triton.jit
 def matmul_kernel(p1, p2, rp, K: tl.constexpr):
